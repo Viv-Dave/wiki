@@ -1,2 +1,2 @@
 # wiki
-A Django bases project.
+A Django based project.
