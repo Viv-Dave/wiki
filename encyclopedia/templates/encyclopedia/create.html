@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    You have landed on the create page
-  </body>
-</html>
+{% extends "encyclopedia/layout.html" %} {% block title %}{{ title }}{% endblock
+%} {% block body %}
+<h1>Create your Page</h1>
+<h5>Enter Heading:</h5>
+<input type="text" />
+<h5>Enter text:</h5>
+<textarea name="" id=""></textarea>
+{% endblock %} {%endblock %}
