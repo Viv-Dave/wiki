@@ -1,8 +1,19 @@
-{% extends "encyclopedia/layout.html" %} {% block title %}{{ title }}{% endblock
-%} {% block body %}
-<h1>Create your Page</h1>
-<h5>Enter Heading:</h5>
-<input type="text" />
-<h5>Enter text:</h5>
-<textarea name="" id=""></textarea>
-{% endblock %} {%endblock %}
+{% extends "encyclopedia/layout.html" %} {% block title %}Create New Page{%
+endblock %} {% block body %}
+<h1>Create a New Page</h1>
+<form action="{% url 'create' %}" method="post">
+  {% csrf_token %}
+  <div>
+    <label for="title">Enter Title:</label>
+    <input type="text" name="title" id="title" required />
+  </div>
+  <div>
+    <label for="content">Enter Content:</label>
+    <textarea name="content" id="content" rows="10" required></textarea>
+  </div>
+  <button type="submit">Save Page</button>
+</form>
+
+{% if error %}
+<p style="color: red">{{ error }}</p>
+{% endif %} {% endblock %} {% endblock %}
