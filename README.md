@@ -62,6 +62,7 @@ Activate the Virtual Environment:
 ```bash
 source ~/YOUR-PATH/wiki-clone/.venv/Scripts/activate
 pip3 install Django
+(Select Interpreter as the .venv python interpreter and not the global one in VSCode)
 ```
 
 Install markdown2:
